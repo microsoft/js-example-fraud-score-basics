@@ -1,0 +1,15 @@
+{
+      "host": "http://localhost:7400",
+      "credentials": {
+        "username": "testuser",
+        "password": "changeme"
+      },
+      "maxConcurrentTaskLimit": 5,
+      "pool": {
+         "preloadobjectname": "fraudModel.rData",
+         "preloadobjectdirectory": "example-fraud-score",
+         "preloadobjectauthor": "testuser"
+      },
+      "releaseGridResources": true,
+      "logging": false
+}

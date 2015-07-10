@@ -1,0 +1,7 @@
+{
+    "filename": "ccFraudScore.R",
+    "directory": "example-fraud-score",
+    "author": "testuser",
+    "rinputs": null,
+    "routputs": ["x"]
+}
