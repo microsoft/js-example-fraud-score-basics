@@ -22,40 +22,11 @@ console.log('fraud-score: Using DeployR Endpoint' +
 //
 var broker = rbroker.pooledTaskBroker(brokerConfig)
     .ready(function() {
+      //
+      // RBroker runtime initialization completed.
+      //
       console.log('fraud-score: RBroker pool [ ' +
           broker.maxConcurrency() + ' ] created.');
-
-      //
-      // The RBroker pool has been initialized, now
-      // start simulation by submitting RTask on the
-      // pool for execution.
-      // 
-      // Each task represents a request by an employee
-      // at a fictitious bank to detect the liklihood of
-      // fraudulent activity on a given bank account.
-      //
-      console.log('fraud-score: Simulation [ ' +
-        appConfig.tasksize + ' Tasks ] begins.');
-
-      for(var i=0; i<appConfig.tasksize; i++) {
-
-          var bal    = Math.abs(Math.random() * 25000),
-              trans  = Math.abs(Math.random() * 100),
-              credit = Math.abs(Math.random() * 75);
-
-          taskConfig.rinputs = [RIn.numeric('bal', bal),
-                                RIn.numeric('trans', trans),
-                                RIn.numeric('credit', credit)];
-
-        var rTask = rbroker.pooledTask(taskConfig);
-
-        //
-        // Sumbit task on RBroker for execution on
-        // the DeployR server.
-        //
-        broker.submit(rTask, false);
-      }
-
     })
     .complete(function(rTask, rTaskResult) {
       //
@@ -88,6 +59,45 @@ var broker = rbroker.pooledTaskBroker(brokerConfig)
           console.log('fraud-score: RBroker shutdown failed.');
         })
     });
+
+//
+// RBroker Application Simulator
+// 
+var simulator = {
+   simulateApp: function(dBroker) {
+      //
+      // Each task represents a request by an employee
+      // at a fictitious bank to detect the liklihood of
+      // fraudulent activity on a given bank account.
+      //
+      console.log('fraud-score: Simulation [ ' +
+        appConfig.tasksize + ' Tasks ] begins.');
+
+      for(var i=0; i<appConfig.tasksize; i++) {
+
+          var bal    = Math.abs(Math.random() * 25000),
+              trans  = Math.abs(Math.random() * 100),
+              credit = Math.abs(Math.random() * 75);
+
+          taskConfig.rinputs = [RIn.numeric('bal', bal),
+                                RIn.numeric('trans', trans),
+                                RIn.numeric('credit', credit)];
+
+        var rTask = rbroker.pooledTask(taskConfig);
+
+        //
+        // Sumbit task on RBroker for execution on
+        // the DeployR server.
+        //
+        dBroker.submit(rTask, false);
+      }
+   }  
+};
+
+//
+// Run the RBroker Simulation
+//
+broker.simulateApp(simulator)
 
 //
 // Utility function to handle configuration overrides.
