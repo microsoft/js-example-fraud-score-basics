@@ -16,7 +16,7 @@
     "rbroker": "^7.4.0"
   },
   "author": "DeployR - Revolution Analytics",
-  "license": "Apache 2.0 License",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/deployr/js-example-fraud-score-basics/issues"
   },
