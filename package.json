@@ -1,0 +1,23 @@
+{
+  "name": "js-example-fraud-score-basics",
+  "version": "1.0.0",
+  "description": "Example Fraud Score Basics - Powered by the RBroker Framework",
+  "main": "fraud-score.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deployr/js-example-fraud-score-basics.git"
+  },
+  "author": "Sean Wells <sean.wells.sc@gmail.com>",
+  "dependencies": {
+    "rbroker": "^7.4.0"
+  },
+  "author": "DeployR - Revolution Analytics",
+  "license": "Apache 2.0 License",
+  "bugs": {
+    "url": "https://github.com/deployr/js-example-fraud-score-basics/issues"
+  },
+  "homepage": "https://github.com/deployr/js-example-fraud-score-basics"
+}

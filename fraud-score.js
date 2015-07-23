@@ -5,10 +5,9 @@
 //
 
 var rbroker       = require('rbroker'),
-    RIn           = require('deployr').RInput,
-    appConfig = require('./config/app')
+    appConfig     = require('./config/app')
     brokerConfig  = require('./config/broker'),
-    taskConfig    = require('./config/task');
+    simulation    = require('./simulation')
 
 //
 // Use process.env to override default brokerConfig.
@@ -61,43 +60,9 @@ var broker = rbroker.pooledTaskBroker(brokerConfig)
     });
 
 //
-// RBroker Application Simulator
-// 
-var simulator = {
-   simulateApp: function(dBroker) {
-      //
-      // Each task represents a request by an employee
-      // at a fictitious bank to detect the liklihood of
-      // fraudulent activity on a given bank account.
-      //
-      console.log('fraud-score: Simulation [ ' +
-        appConfig.tasksize + ' Tasks ] begins.');
-
-      for(var i=0; i<appConfig.tasksize; i++) {
-
-          var bal    = Math.abs(Math.random() * 25000),
-              trans  = Math.abs(Math.random() * 100),
-              credit = Math.abs(Math.random() * 75);
-
-          taskConfig.rinputs = [RIn.numeric('bal', bal),
-                                RIn.numeric('trans', trans),
-                                RIn.numeric('credit', credit)];
-
-        var rTask = rbroker.pooledTask(taskConfig);
-
-        //
-        // Sumbit task on RBroker for execution on
-        // the DeployR server.
-        //
-        dBroker.submit(rTask, false);
-      }
-   }  
-};
-
-//
 // Run the RBroker Simulation
 //
-broker.simulateApp(simulator)
+broker.simulateApp(simulation)
 
 //
 // Utility function to handle configuration overrides.
