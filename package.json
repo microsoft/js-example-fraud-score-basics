@@ -9,16 +9,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/deployr/js-example-fraud-score-basics.git"
+    "url": "https://github.com/microsoft/js-example-fraud-score-basics.git"
   },
   "author": "Sean Wells <sean.wells.sc@gmail.com>",
   "dependencies": {
-    "rbroker": "^7.4.0"
+    "rbroker": "8.0.5"
   },
-  "author": "DeployR - Revolution Analytics",
-  "license": "MIT",
+  "author": "DeployR",
+  "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/deployr/js-example-fraud-score-basics/issues"
+    "url": "https://github.com/microsoft/js-example-fraud-score-basics/issues"
   },
-  "homepage": "https://github.com/deployr/js-example-fraud-score-basics"
+  "homepage": "https://github.com/microsoft/js-example-fraud-score-basics"
 }

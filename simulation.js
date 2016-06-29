@@ -3,10 +3,10 @@
 //
 // RBroker Framework RTask App Simulation.
 //
-var rbroker   = require('rbroker'),
-    RIn       = rbroker.RInput,
-    taskConfig    = require('./config/task'),
-    appConfig = require('./config/app');
+var rbroker    = require('rbroker'),
+    RIn        = rbroker.RInput,
+    taskConfig = require('./config/task'),
+    appConfig  = require('./config/app');
 
 module.exports = {
 

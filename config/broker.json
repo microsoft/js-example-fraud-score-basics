@@ -1,8 +1,8 @@
 {
-      "host": "http://localhost:7400",
+      "host": "http://localhost:8050",
       "credentials": {
         "username": "testuser",
-        "password": "changeme"
+        "password": "TESTUSER_PASSWORD"
       },
       "maxConcurrentTaskLimit": 5,
       "pool": {

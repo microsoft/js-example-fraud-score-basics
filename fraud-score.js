@@ -40,7 +40,8 @@ var broker = rbroker.pooledTaskBroker(brokerConfig)
       // Task completed handler. Data returned by
       // task is available on rTaskResult.
       //
-      console.log('fraud-score: error ' + err);
+      console.log('fraud-score: error');
+      console.log(err);
     })
     .idle(function() {
       //
