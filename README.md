@@ -15,11 +15,11 @@ A more complete `js-example-fraud-score` example application can be found [here]
 ## About
 
 This example demonstrates the use of
-[DeployR](http://deployr.revolutionanalytics.com) as a real-time, R
+[DeployR](https://msdn.microsoft.com/en-us/microsoft-r/deployr-about) as a real-time, R
 analytics scoring engine. The example scenario mimics a real world application where employees at a fictitious bank can request _fraud scores_ for bank account records to help detect fraudulent account activity.
 
 This example is built using the DeployR [RBroker
-Framework](http://deployr.revolutionanalytics.com/dev/rbroker), the simplest way
+Framework](https://msdn.microsoft.com/en-us/microsoft-r/deployr-rbroker-framework), the simplest way
 to integrate R analytics inside any Java, JavaScript or .NET
 application. This example consists of two distinct parts:
 
@@ -79,7 +79,7 @@ Source:
 fraud-score.js
 ```
 
-The example application is implemented as a simple [Node.js application](https://nodejs.org), using the [RBroker Framework](http://deployr.revolutionanalytics.com/dev/rbroker) for integration with DeployR.
+The example application is implemented as a simple [Node.js application](https://nodejs.org), using the [RBroker Framework](https://msdn.microsoft.com/en-us/microsoft-r/deployr-tools-and-samples#rbroker-framework) for integration with DeployR.
 
 The application works as follows:
 
@@ -111,7 +111,7 @@ Alternatively you can run it inline:
 #### R Analytics Dependencies
 
 DeployR-powered applications typically depend on repository-managed R analytics
-scripts, models and/or data files. See the DeployR [Repository Manager](http://deployr.revolutionanalytics.com/documents/help/repo-man/) for details on how best to manage your own R analytics dependencies.
+scripts, models and/or data files. See the DeployR [Repository Manager](https://msdn.microsoft.com/en-us/microsoft-r/deployr-repository-manager/deployr-repository-manager-about) for details on how best to manage your own R analytics dependencies.
 
 This example depends on two repository-managed files:
 
@@ -124,9 +124,9 @@ These example file dependencies ship, pre-deployed in the DeployR repository so 
 
 #### RBroker Framework - Pooled Task Runtime
 
-This examples uses the [RBroker Framework](http://deployr.revolutionanalytics.com/documents/dev/rbroker/) to integrate _DeployR_ real-time scoring capabilities inside the example application.
+This examples uses the [RBroker Framework](https://msdn.microsoft.com/en-us/microsoft-r/deployr-tools-and-samples#rbroker-framework) to integrate _DeployR_ real-time scoring capabilities inside the example application.
 
-Specifically, this example uses the [Pooled Task Runtime](http://deployr.revolutionanalytics.com/documents/dev/rbroker/#pooled) provided by the _RBroker Framework_.
+Specifically, this example uses the [Pooled Task Runtime](https://msdn.microsoft.com/en-us/microsoft-r/deployr-rbroker-framework#pooled-task-runtime) provided by the _RBroker Framework_.
 
 #### RBroker Framework - Throughput
 
@@ -135,8 +135,8 @@ We recommend experimenting with the size of the pool and the number of tasks exe
 See the following sections of the _RBroker Framework_ 
 tutorial for related details:
 
-- [Client Application Profiling](http://deployr.revolutionanalytics.com/documents/dev/rbroker/#profiling)
-- [Grid Resource Management](http://deployr.revolutionanalytics.com/documents/dev/rbroker/#gridprimer) 
+- [Client Application Profiling](https://msdn.microsoft.com/en-us/microsoft-r/deployr-rbroker-framework#client-application-profiling)
+- [Grid Resource Management](https://msdn.microsoft.com/en-us/microsoft-r/deployr-rbroker-framework#gridprimer) 
 
 ## License ##
 
